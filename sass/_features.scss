@@ -22,6 +22,30 @@
 .icon-right {
   display: flex;
   flex-direction: column;
+
+  .features-tools-icon span {
+    display: none;
+  }
+
+  @media(max-width: 940px) {
+    display: inline;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 620px;
+
+    :first-child {
+      margin-right: 16px;
+    }
+
+    .features-delivery {
+      width: 620px;
+
+      .features-tools-icon span {
+        display: block;
+        margin-right: -20px;
+      }
+    }
+  }
 }
 
 .features-item {
@@ -100,20 +124,22 @@
   max-width: 620px;
 
   @media (max-width: 940px) {
-    width: 40%;
+    margin: 0 auto;
   }
 
-  @media (max-width: 600px) {
-    flex-direction: column;
-    width: 100%;
-  }
+  // @media (max-width: 600px) {
+  //   flex-direction: column;
+  //   width: 100%;
+  //   justify-content: center;
+  // }
 }
 
 .three-features {
   @media (max-width: 940px) {
     display: flex;
-    width: 100%;
-    width: 60%;
+    margin: 0 auto;
+    // width: 100%;
+    // max-width: 620px;
   }
 
   @media (max-width: 600px) {
@@ -121,6 +147,8 @@
     width: 100%;
   }
 }
+
+
 
 .feature-new {
   position: relative;
@@ -145,45 +173,78 @@
   }
 }
 
-.features-slider {
-  display: flex;
-  flex-direction: column;
-  color: $white;
+.slider {
+  max-width: 620px;
+  outline: none;
   position: relative;
 
-  img {
-    position: absolute;
-    z-index: -1;
-  }
 
-  :nth-child(1) {
-    text-transform: uppercase;
-    font-family: $cu;
-    font-style: 700;
-    font-size: 36px;
-    margin: 23px 0 5px 24px;
-
-  }
-
-  :nth-child(2) {
-    font-family: $cu;
-    font-style: 700;
-    font-size: 18px;
-    margin: 0 0 113px 24px;
-  }
-
-  input {
-    width: 192px;
-    height: 32px;
-    background-color: $red;
+  .features-slider {
+    display: flex;
+    flex-direction: column;
     color: $white;
-    border: none;
-    text-transform: uppercase;
-    font-family: $cu;
-    font-size: 14px;
-    margin-left: 24px;
-    padding: 10px 0;
+    position: relative;
+
+    img {
+      position: absolute;
+      z-index: -1;
+    }
+
+    :nth-child(1) {
+      text-transform: uppercase;
+      font-family: $cu;
+      font-style: 700;
+      font-size: 36px;
+      margin: 23px 0 5px 24px;
+
+    }
+
+    :nth-child(2) {
+      font-family: $cu;
+      font-style: 700;
+      font-size: 18px;
+      margin: 0 0 113px 24px;
+    }
+
+    input {
+      width: 192px;
+      height: 32px;
+      background-color: $red;
+      color: $white;
+      border: none;
+      text-transform: uppercase;
+      font-family: $cu;
+      font-size: 14px;
+      margin-left: 24px;
+      padding: 10px 0;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%; // выравнивание по вертикали
+    margin: -15px 0 0 0; // корректировка  вертикального выравнивания
+    z-index: 5; // стрелки сверху картинок
+    // font-size: 0; // убираем надпись на дефолтной стрелке
+    width: 22px; // ширина стрелки
+    height: 40px; // высота стрелки
+    padding: 0px 20px; // поля между стрелкой и краем слайдера
+  }
+
+  .next {
+    //класс задан в javascript для замены стандартной кнопки
+    right: 20px;
     cursor: pointer;
-    outline: none;
+  }
+
+  .prev {
+    //класс задан в javascript для замены стандартной кнопки
+    cursor: pointer;
+  }
+
+  @media(max-width: 940px) {
+    margin: 0 auto;
   }
 }

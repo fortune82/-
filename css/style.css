@@ -880,6 +880,29 @@ header {
           flex-direction: column;
 }
 
+.icon-right .features-tools-icon span {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .icon-right {
+    display: inline;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 620px;
+  }
+  .icon-right :first-child {
+    margin-right: 16px;
+  }
+  .icon-right .features-delivery {
+    width: 620px;
+  }
+  .icon-right .features-delivery .features-tools-icon span {
+    display: block;
+    margin-right: -20px;
+  }
+}
+
 .features-item {
   width: 300px;
   height: 123px;
@@ -975,17 +998,7 @@ header {
 
 @media (max-width: 940px) {
   .two-features {
-    width: 40%;
-  }
-}
-
-@media (max-width: 600px) {
-  .two-features {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -994,8 +1007,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -1032,7 +1044,13 @@ header {
   right: -30px;
 }
 
-.features-slider {
+.slider {
+  max-width: 620px;
+  outline: none;
+  position: relative;
+}
+
+.slider .features-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1044,12 +1062,12 @@ header {
   position: relative;
 }
 
-.features-slider img {
+.slider .features-slider img {
   position: absolute;
   z-index: -1;
 }
 
-.features-slider :nth-child(1) {
+.slider .features-slider :nth-child(1) {
   text-transform: uppercase;
   font-family: "Cuprum", sans-serif;
   font-style: 700;
@@ -1057,14 +1075,14 @@ header {
   margin: 23px 0 5px 24px;
 }
 
-.features-slider :nth-child(2) {
+.slider .features-slider :nth-child(2) {
   font-family: "Cuprum", sans-serif;
   font-style: 700;
   font-size: 18px;
   margin: 0 0 113px 24px;
 }
 
-.features-slider input {
+.slider .features-slider input {
   width: 192px;
   height: 32px;
   background-color: #ee3643;
@@ -1077,5 +1095,30 @@ header {
   padding: 10px 0;
   cursor: pointer;
   outline: none;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -15px 0 0 0;
+  z-index: 5;
+  width: 22px;
+  height: 40px;
+  padding: 0px 20px;
+}
+
+.slider .next {
+  right: 20px;
+  cursor: pointer;
+}
+
+.slider .prev {
+  cursor: pointer;
+}
+
+@media (max-width: 940px) {
+  .slider {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
