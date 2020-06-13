@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap");
+$wrapper: 1200px;
+$red: #ee3643;
+$darkred: #ba2732;
+$white: #fff;
+$green: #63a63e;
+$lightgreen: #5fbb2d;
+$darkblue: #293449;
+$black: #000;
+$navy: #161d29;
+$address-color: #32425c;
+$bg-color: #f1f5f7;
+$pt: "PT Sans", sans-serif;
+$cu: "Cuprum", sans-serif;
+
+body {
+  background: $white;
+}
+.wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+@mixin flex($fw, $fd, $jc, $ai) {
+  display: flex;
+  flex-wrap: $fw;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
