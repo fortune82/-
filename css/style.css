@@ -867,7 +867,7 @@ header {
 }
 
 .features-block {
-  width: 300px;
+  max-width: 300px;
 }
 
 .icon-right {
@@ -1030,5 +1030,52 @@ header {
   position: absolute;
   top: 5px;
   right: -30px;
+}
+
+.features-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  position: relative;
+}
+
+.features-slider img {
+  position: absolute;
+  z-index: -1;
+}
+
+.features-slider :nth-child(1) {
+  text-transform: uppercase;
+  font-family: "Cuprum", sans-serif;
+  font-style: 700;
+  font-size: 36px;
+  margin: 23px 0 5px 24px;
+}
+
+.features-slider :nth-child(2) {
+  font-family: "Cuprum", sans-serif;
+  font-style: 700;
+  font-size: 18px;
+  margin: 0 0 113px 24px;
+}
+
+.features-slider input {
+  width: 192px;
+  height: 32px;
+  background-color: #ee3643;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  margin-left: 24px;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
