@@ -1100,21 +1100,10 @@ header {
 
 .slider .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: 60%;
   margin: -15px 0 0 0;
   z-index: 5;
-  width: 22px;
-  height: 40px;
-  padding: 0px 20px;
-}
-
-.slider .next {
-  right: 20px;
-  cursor: pointer;
-}
-
-.slider .prev {
-  cursor: pointer;
+  padding: 0px 45px;
 }
 
 @media (max-width: 940px) {
