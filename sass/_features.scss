@@ -142,7 +142,7 @@
     // max-width: 620px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     flex-direction: column;
     width: 100%;
   }
@@ -246,5 +246,61 @@
 
   @media(max-width: 940px) {
     margin: 0 auto;
+  }
+}
+
+// Делаем меню "хлебные крошки" 
+// До медиа запроса 650 px делаем его невидемым
+
+.breadcrumb {
+  display: none;
+  padding: 10px 16px;
+
+  .fa-home {
+    color: grey;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $black;
+      font-size: 13px;
+      line-height: 30px;
+
+      :hover {
+        color: $navy;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  /* Добавить символ косой черты (>) перед/за каждым элементом списка */
+  li+li:before {
+    padding: 8px;
+    color: black;
+    content: "\3E";
+    color: grey;
+    font-size: 14px;
+  }
+
+
+}
+
+@media(max-width: 650px) {
+
+  .two-features,
+  .slider,
+  .three-features {
+    display: none;
+  }
+
+  .breadcrumb {
+    display: block;
   }
 }
