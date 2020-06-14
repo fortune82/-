@@ -12,7 +12,7 @@ $('.mini-menu').click(function () {
 
 $(document).ready(function () {
 	$('.slider').slick({
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 1500,
 		arrows: true,
 		dots: false,
